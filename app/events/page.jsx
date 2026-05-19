@@ -28,7 +28,7 @@ export default function EventList() {
     setLoading(true);
     setError(null);
     fetch(
-      `http://localhost:3001/events?q=${searchQuery}&_page=${page}&_limit=${limit}`,
+      `https://localhost:3001/events?q=${searchQuery}&_page=${page}&_limit=${limit}`,
     )
       .then((response) => {
         if (!response.ok) {

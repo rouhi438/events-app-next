@@ -16,10 +16,11 @@ export default function EventDetail() {
   const [quantity, setQuantity] = useState(1);
 
   const { id } = useParams();
-
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL;
   useEffect(() => {
     setLoading(true);
-    fetch(`http://localhost:3001/events/${id}`)
+    //fetch(`http://localhost:3001/events/${id}`)
+    fetch(`${baseUrl}/events/${id}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch event");

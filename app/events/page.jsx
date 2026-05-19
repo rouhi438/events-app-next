@@ -19,7 +19,7 @@ export default function EventList() {
   const [page, setPage] = useState(1);
   const [limit] = useState(20);
   const { user } = useAuth();
-
+  const baseUrl = process.env.NEXT_PUBLIC_API_URL;
   useEffect(() => {
     setPage(1);
   }, [searchQuery]);
@@ -27,9 +27,7 @@ export default function EventList() {
   useEffect(() => {
     setLoading(true);
     setError(null);
-    fetch(
-      `${process.env.NEXT_PUBLIC_API_URL}/events?q=${searchQuery}&_page=${page}&_limit=${limit}`,
-    )
+    fetch(`${baseUrl}/events?q=${searchQuery}&_page=${page}&_limit=${limit}`)
       // fetch(
       //   `https://localhost:3001/events?q=${searchQuery}&_page=${page}&_limit=${limit}`,
       // )

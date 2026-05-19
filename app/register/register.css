@@ -1,0 +1,148 @@
+.form-container {
+    display: flex;
+    min-height: calc(100vh - 80px);
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f4f6;
+    padding: 20px;
+    font-family: system-ui, sans-serif;
+}
+
+.form-card {
+    width: 100%;
+    max-width: 448px;
+    background-color: white;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #6b7280;
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.field {
+    margin-bottom: 32px;
+    border-bottom: 1px solid lightgray;
+}
+
+.field input {
+    outline: none;
+    border: none;
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 16px 0;
+}
+
+.remember input {
+    width: 16px;
+    height: 16px;
+    accent-color: #3b82f6;
+}
+
+.remember label {
+    font-size: 14px;
+    color: #374151;
+}
+
+.submitBtn {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    font-weight: 600;
+    padding: 9.6px;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.submitBtn:hover {
+    background-color: #1d4ed8;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 24px 0;
+}
+
+.line {
+    flex: 1;
+    height: 1px;
+    background-color: #e5e7eb;
+}
+
+.dividerText {
+    font-size: 11.2px;
+    font-weight: 500;
+    color: #9ca3af;
+    letter-spacing: 0.5px;
+}
+
+.socialButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.socialBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 8px;
+    background-color: white;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.socialBtn:hover {
+    background-color: #f9fafb;
+    border: 1px solid #1d4ed8;
+}
+
+.footer {
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+    margin-top: 24px;
+}
+
+.footer a {
+    color: #2563eb;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}

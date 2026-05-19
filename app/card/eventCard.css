@@ -1,0 +1,51 @@
+.list-item {
+    min-width: 0;
+    padding: 10px 20px 20px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: space-around;
+}
+
+.list-item:hover {
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.5);
+    transition: all 0.2s ease;
+}
+
+.event-title {
+    color: darkblue;
+    font-weight: bold;
+}
+
+.btns {
+    display: flex;
+    gap: 10px;
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.btns .bye-btn,
+.btns a {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+    background-color: rgb(223, 219, 214);
+    text-align: center;
+}
+
+.btns .bye-btn:hover,
+.btns a:hover {
+    border: 1px solid rgb(37, 71, 209);
+    cursor: pointer;
+    transform: translateY(-3px);
+}

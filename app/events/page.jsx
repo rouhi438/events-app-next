@@ -28,8 +28,11 @@ export default function EventList() {
     setLoading(true);
     setError(null);
     fetch(
-      `https://localhost:3001/events?q=${searchQuery}&_page=${page}&_limit=${limit}`,
+      `${process.env.NEXT_PUBLIC_API_URL}/events?q=${searchQuery}&_page=${page}&_limit=${limit}`,
     )
+      // fetch(
+      //   `https://localhost:3001/events?q=${searchQuery}&_page=${page}&_limit=${limit}`,
+      // )
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch events");

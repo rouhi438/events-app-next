@@ -3,11 +3,26 @@ const auth = require("json-server-auth");
 const path = require("path");
 
 const app = jsonServer.create();
-const router = jsonServer.router(path.join(__dirname, "db.json"));
+const router = jsonServer.router(path.join(__dirname, "src/data/db.json"));
 const middlewares = jsonServer.defaults();
 
 // Required: bind the router db to the app for json-server-auth to work
 app.db = router.db;
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept, Authorization",
+  );
+  res.header(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PUT, PATCH, DELETE, OPTIONS",
+  );
+  if (req.method === "OPTIONS") {
+    return res.sendStatus(200);
+  }
+  next();
+});
 
 // Strip the /api prefix (added by the frontend's api() helper) and apply
 // access control permissions where needed.
@@ -36,7 +51,7 @@ app.use(middlewares);
 app.use(auth);
 app.use(router);
 
-const PORT = process.env.API_PORT || 3001;
+const PORT = process.env.PORT || 3001;
 
 app.listen(PORT, () => {
   console.log(`Mock API running at http://localhost:${PORT}`);

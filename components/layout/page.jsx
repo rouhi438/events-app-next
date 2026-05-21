@@ -56,6 +56,9 @@ export default function Layout({ children }) {
           </div>
           <div className="menu-bar">
             <div className="link-bar">
+              <Link href="/" className="link">
+                Home
+              </Link>
               <Link href="/events" className="link">
                 Events
               </Link>
@@ -91,10 +94,14 @@ export default function Layout({ children }) {
                 <FiSearch className="search-icon" />
                 {/* <label htmlFor="search">Find Events</label> */}
                 <input
-                  className="search-input"
+                  className={`search-input ${pathname !== "/events" ? "disabled" : ""}`}
                   type="text"
                   id="search"
-                  placeholder="Search events..."
+                  placeholder={
+                    pathname === "/events"
+                      ? "Search events..."
+                      : "Go to events to search"
+                  }
                   value={searchQuery}
                   onChange={(event) => setSearchQuery(event.target.value)}
                 />

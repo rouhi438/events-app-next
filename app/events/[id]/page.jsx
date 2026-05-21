@@ -38,9 +38,11 @@ export default function EventDetail() {
   return (
     <div className="event-detail-container">
       <div className="detail-header">
+        <div className="back-btn-holder">
         <Link href="/events" className="back-btn">
           ← Back to events
         </Link>
+      </div>
         <div className="quantity-holder">
           <div className="quantity-controls">
             <button
@@ -54,7 +56,7 @@ export default function EventDetail() {
             >
               -
             </button>
-            <span className="ticket-quantity-">{quantity}</span>
+            <span className="ticket-quantity">{quantity}</span>
             <button
               className="plus"
               type="button"

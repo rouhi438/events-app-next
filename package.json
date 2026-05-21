@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "api": "node src/data/server.cjs"
+    "api": "node server.cjs"
   },
   "dependencies": {
     "json-server": "^0.17.4",

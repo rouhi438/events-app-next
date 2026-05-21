@@ -9,63 +9,94 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    height: 35px;
 }
 
 .quantity-holder {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
 
-.quantity-controls {
-    background-color: white;
-    border: 1px solid;
-    border-radius: 30px;
-}
 
-.add-btn,
-.plus,
-.minus {
-    height: 100%;
-    padding: 0 16px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-.add-btn {
-    border: 1px solid;
-    border-radius: 30px;
-}
-
-.add-btn:hover,
-.quantity-controls:hover {
-    border: 1px solid rgb(37, 71, 209);
-    transform: translateY(-3px);
-    background-color: rgb(223, 219, 214);
+.back-btn-holder {
+    display: flex;
+    justify-content: flex-start;
 }
 
 .back-btn {
     height: 100%;
-    line-height: 35px;
-    display: inline-block;
+    display: flex;
+    align-items: center;
     margin-bottom: 10px;
     text-decoration: none;
     color: white;
-    background: #111;
+    background: darkblue;
     padding: 0px 16px;
     border-radius: 6px;
     font-size: 14px;
 }
 
 .back-btn:hover {
-    background: #333;
+    background: #fff;
+    color: darkblue;
+    border: 1px solid darkblue;
+
 }
 
-.event-name {
+.quantity-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    width: 100px;
+    margin: 0 5px;
+    border-radius: 30px;
+    cursor: pointer;
+    overflow: hidden;
+    height: 35px;
+}
+
+.minus,
+.plus {
+    border: none;
+    width: 60px;
+    background-color: #fff;
+    height: 100%;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.quantity-controls:hover,
+.add-btn:hover {
+    border: 1px solid rgb(37, 71, 209);
+    transform: translateY(-3px);
+}
+
+.ticket-quantity {
+    display: inline-block;
+    width: 30px !important;
+    border: none !important;
     text-align: center;
-    margin: 20px;
+    height: 100%;
+    line-height: 35px;
+    background-color: #fff;
+}
+
+.add-btn {
+    height: 35px;
+    width: 100px;
+    border: 1px solid;
+    border-radius: 30px;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+
+
+}
+
+.event-detail-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
     color: darkblue;
-    font-weight: bold;
 }
 
 .event-detail-top {
@@ -92,5 +123,31 @@
 
 .event-detail-description h3 {
     margin-bottom: 10px;
-    font-weight: bold;
+    color: darkblue;
+}
+
+@media (max-width:500px) {
+    .detail-header {
+        flex-direction: column;
+    }
+
+    .back-btn-holder {
+        width: 100%;
+        height: 35px;
+        justify-content: center;
+
+    }
+
+    .back-btn {
+        width: 170px;
+        justify-content: center;
+    }
+
+    .event-name {
+        margin-top: 60px;
+    }
+
+    .quantity-holder {
+        justify-content: space-between
+    }
 }

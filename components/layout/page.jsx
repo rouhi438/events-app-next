@@ -9,6 +9,7 @@ import { useCart } from "../../src/context/CartContext.jsx";
 import "./layout.css";
 import Image from "next/image";
 import { useSearch } from "../../src/context/SearchContext.jsx";
+import { FiSearch } from "react-icons/fi";
 
 export default function Layout({ children }) {
   const { user, logout } = useAuth();
@@ -31,12 +32,12 @@ export default function Layout({ children }) {
       <header>
         <nav>
           <div className="cart-holder">
-            <Link href="/cart">
+            {/* <Link href="/cart">
               <FaShoppingCart className="cart-icon" />
               {totalQuantity > 0 && (
                 <span className="cart-quantity">{totalQuantity}</span>
               )}
-            </Link>
+            </Link> */}
           </div>
           <div className="logo-holder">
             <a
@@ -48,7 +49,7 @@ export default function Layout({ children }) {
                 src={hyfLogo}
                 alt="HackYourFuture logo"
                 className="logo"
-                width={200}
+                width={100}
                 style={{ padding: "20px" }}
               />
             </a>
@@ -77,10 +78,19 @@ export default function Layout({ children }) {
                   <Link href="/register">Register</Link>
                 </>
               )}
+              <div className="cart-holder">
+                <Link href="/cart">
+                  <FaShoppingCart className="cart-icon" />
+                  {totalQuantity > 0 && (
+                    <span className="cart-quantity">{totalQuantity}</span>
+                  )}
+                </Link>
+              </div>
             </div>
             {pathname === "/events" && (
               <div className="search-holder">
-                <label htmlFor="search">Find Events</label>
+                <FiSearch className="search-icon" />
+                {/* <label htmlFor="search">Find Events</label> */}
                 <input
                   className="search-input"
                   type="text"

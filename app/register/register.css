@@ -46,6 +46,19 @@
     transition: 0.2s;
 }
 
+.pass-field {
+    position: relative;
+}
+
+.eye-icon {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #6b7280;
+}
+
 .remember {
     display: flex;
     align-items: center;

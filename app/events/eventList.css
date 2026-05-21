@@ -67,16 +67,23 @@
 
 }
 
-@media (max-width:500px) {
+@media (max-width:535px) {
     .page-change {
-        padding: 0 10px;
+        padding: 0 5px;
     }
 
     .welcome-banner {
         font-size: 12px;
+        padding: 5px;
     }
 
-    .change-page-btns-holder button {
-        padding: 10px 20px;
+    .change-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+
+    }
+
+    .change-page-btns-holder span {
+        font-size: 12px;
     }
 }

@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import "./login.css";
 import { useState } from "react";
 import { useAuth } from "../../src/context/AuthContext";
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 export default function Login() {
   const [showPassword, setShowPassword] = useState(false);
@@ -75,10 +76,12 @@ export default function Login() {
 
         <div className="socialButtons">
           <button className="socialBtn">
-            <span className="socialIcon">G</span> Google
+            <FaGoogle className="google-icon" />
+            Google
           </button>
           <button className="socialBtn">
-            <span className="socialIcon">G</span> Github
+            <FaGithub className="github-icon" />
+            Github
           </button>
         </div>
 

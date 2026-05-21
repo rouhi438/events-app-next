@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import "./eventList.css";
 import { useAuth } from "../../src/context/AuthContext.jsx";
 import { useSearch } from "../../src/context/SearchContext.jsx";
-
+import { FaSpinner } from "react-icons/fa";
 export default function EventList() {
   const { searchQuery } = useSearch();
 
@@ -17,7 +17,7 @@ export default function EventList() {
   const [error, setError] = useState(null);
 
   const [page, setPage] = useState(1);
-  const [limit] = useState(20);
+  const [limit] = useState(6);
   const { user } = useAuth();
   const baseUrl = process.env.NEXT_PUBLIC_API_URL;
   useEffect(() => {
@@ -44,7 +44,13 @@ export default function EventList() {
       .catch((error) => setError(error.message))
       .finally(() => setLoading(false));
   }, [searchQuery, page]);
-  if (loading) return <p>Loading events...</p>;
+  if (loading)
+    return (
+      <div className="loading-container">
+        <FaSpinner className="spinner" />
+        <p>Loading events...</p>
+      </div>
+    );
   if (error) return <p>Error: {error}</p>;
 
   return (

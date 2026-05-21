@@ -28,8 +28,8 @@ header {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    padding: 16px 24px;
+    gap: 10px;
+    padding: 5px 24px;
     position: relative;
 }
 
@@ -42,7 +42,7 @@ header {
 
 .logo {
     height: auto;
-    max-width: 160px;
+    max-width: 100px;
     padding: 0 !important;
 }
 
@@ -138,15 +138,20 @@ header {
     position: absolute;
     top: -12px;
     right: 0px;
+
     width: 18px;
     height: 18px;
     border: 1px solid #0066cc !important;
     color: #0066cc !important;
+
     border-radius: 50%;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     font-size: 10px;
+
     line-height: 1;
 }
 
@@ -173,12 +178,16 @@ footer {
     .Layout header nav {
         flex-direction: column;
         align-items: stretch;
-        gap: 16px;
-        padding: 16px;
+        gap: 5px;
+        padding: 5px;
     }
 
     .logo-holder {
         justify-content: center;
+    }
+
+    .logo {
+        max-width: 70px
     }
 
     .menu-bar {

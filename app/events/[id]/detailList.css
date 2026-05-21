@@ -129,6 +129,7 @@
 @media (max-width:500px) {
     .detail-header {
         flex-direction: column;
+        gap: 10px;
     }
 
     .back-btn-holder {

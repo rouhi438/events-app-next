@@ -50,7 +50,6 @@ export default function Layout({ children }) {
                 alt="HackYourFuture logo"
                 className="logo"
                 width={100}
-                style={{ padding: "20px" }}
               />
             </a>
             {/* Navigation links go here — e.g. link to event list, cart, login */}
